@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="generator">
+        <div class="generator__passText">
+            <input type="text" oninput="toCopy()" placeholder="P4$5W0rD!">
+            <button id="btnCopy" onclick="copyPass()">Copy</button>
+        </div>
+
+        <div class="config">
+
+            <label for="">
+                <div class="rangeText">
+                    Character Length
+                    <var class="rangeValue">15</var>
+                </div>
+                <input type="range" id="range" max="30" onchange="applyMaxlength()">
+            </label>
+            <label>
+                <input type="checkbox" name="" id="uppercase">
+                <span></span>
+                Include Uppercase Letters
+            </label>
+            <label>
+                <input type="checkbox" name="" id="lowercase">
+                <span></span>
+                Include Lowercase Letters
+            </label>
+            <label>
+                <input type="checkbox" name="" id="numbers">
+                <span></span>
+                Include Numbers
+            </label>
+            <label>
+                <input type="checkbox" name="" id="symbols">
+                <span></span>
+                Include Symbols
+            </label>
+
+            <section class="container-classification">
+                <p class="classification">strength</p>
+                <div>
+                    <h3></h3>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </section>
+
+            <button class="generate">Generate
+            </button>
+
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

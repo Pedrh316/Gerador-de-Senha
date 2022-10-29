@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1px;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    background-color: #0e0d13;
+}
+
+label {
+    display: block;
+}
+
+button {
+    border: none;
+}
+
+.generator__passText {
+    max-width: 600px;
+}
+
+
+.generator__passText {
+    display: flex;
+    position: relative;
+    background-color: #24232b;
+}
+
+.generator__passText input {
+    background-color: #24232b;
+    border: none;
+    padding: 1rem;
+    width: 400px;
+    font-size: 1.5rem;
+}
+
+.generator__passText input::placeholder {
+    color: hsl(0, 0%, 45%);
+    font-weight: 600;
+}
+
+
+.generator__passText input:focus {
+    outline: .5px solid hsl(120, 100%, 90%);
+}
+
+.generator__passText button {
+    position: absolute;
+    font-size: 1.5rem;
+    right: 0;
+    background-color: #24232b;
+    color: hsl(120, 100%, 82%);
+    box-shadow: inset 1rem 0px #24232b;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+.config {
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #24232b;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.config .rangeText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.config var {
+    float: right;
+    font-style: normal;
+    font-size: 1.7rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: hsl(120, 100%, 82%);
+}
+
+
+label span {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: 1px solid hsl(120, 100%, 82%);
+    ;
+    display: inline-block;
+    position: relative;
+    margin-right: .8rem;
+}
+
+label input[type="checkbox"]:checked+span {
+    background-color: hsl(120, 100%, 82%);
+    ;
+}
+
+label input[type="checkbox"]:checked+span::before {
+    content: '';
+    position: absolute;
+    border: 3px solid #24232b;
+    border-width: 0px 0px 3px 3px;
+    top: 4px;
+    right: 3px;
+    left: 3px;
+    bottom: 6px;
+    transform: rotate(-45deg);
+}
+
+input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+
+
+input[type=range] {
+    height: 0px;
+    -webkit-appearance: none;
+    margin: 20px 0 10px;
+    width: 100%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    background: #000000;
+    border-radius: 14px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    height: 25px;
+    width: 25px;
+    -webkit-appearance: none;
+    margin-top: -10px;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 25px;
+    width: 25px;
+    border-radius: 15px;
+    background: white;
+    cursor: pointer;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: black;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 7px;
+    cursor: pointer;
+    background: #0e0d13;
+    border-radius: 14px;
+}
+
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 14px;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+    border: 0px solid #000000;
+    border-radius: 28px;
+}
+
+input[type=range]::-ms-fill-upper {
+    border: 0px solid #000000;
+    border-radius: 28px;
+}
+
+input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #000000;
+    height: 20px;
+    width: 40px;
+    border-radius: 12px;
+    background: hsl(120, 100%, 82%);
+    cursor: pointer;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: black;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: black;
+}
+
+.container-classification {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: #0e0d13;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
+.container-classification p {
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: hsl(0, 0%, 60%);
+}
+
+.container-classification div {
+    display: flex;
+    gap: 5px;
+}
+
+.container-classification div h3 {
+    margin-right: 5px;
+    font-weight: 500;
+}
+
+.container-classification div span {
+    width: 7px;
+    background-color: hsl(50, 100%, 50%);
+}
+
+.generate {
+    background-color: transparent;
+    padding: 1rem;
+    text-transform: uppercase;
+    border: 1px solid hsl(120, 100%, 82%);
+    background-color: hsl(120, 100%, 82%);
+    color: #24232b;
+    transition: .1s;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.generate:hover {
+    color: hsl(120, 100%, 82%);
+    background-color: #24232b;
+}
